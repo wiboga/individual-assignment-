@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VICOBA Savings Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: yellow;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 400px;
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: green;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            color: blueviolet;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="number"],
+        .form-container input[type="date"],
+        .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: blue;
+            border: none;
+            border-radius: 4px;
+            color: yellow;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: blueviolet;
+        }
+    </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: red;
+        }
+        .navbar {
+            background-color: darkorange;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: green;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: blue;
+            color: darkorange;
+        }
+        .hero {
+            background-color: yellow;
+            color: purple;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 50px;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 20px;
+            margin: 10px 0 0;
+        }
+        .content {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: yellow;
+        }
+        .section p {
+            font-size: 18px;
+            color: blue;
+        }
+        .footer {
+            background-color: red;
+            color: gold;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+           <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="Homepage.html">Home</a>
+        <a href="List.html">Members</a>
+        <a href="Loan.html">Loans</a>
+        <a href="Report.html">Reports</a>
+    </div>
+        <h2>VICOBA Savings Form</h2>
+        <form action="/submit_savings" method="POST">
+            <label for="member_id">Member ID</label>
+            <input type="text" id="member_id" name="member_id" required>
+
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" name="amount" required>
+
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="savings_type">Savings Type</label>
+            <select id="savings_type" name="savings_type" required>
+                <option value="">Select Savings Type</option>
+                <option value="regular">Regular</option>
+                <option value="emergency">Emergency</option>
+                <option value="investment">Investment</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

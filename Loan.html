@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VICOBA Loan Request Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: blue;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 400px;
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: gold;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            color: yellowgreen;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="number"],
+        .form-container input[type="date"],
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-container textarea {
+            resize: vertical;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: blue;
+            border: none;
+            border-radius: 4px;
+            color: green;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: yellow;
+        }
+    </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: blue;
+        }
+        .navbar {
+            background-color: darkmagenta;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: yellow;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: green;
+            color: brown;
+        }
+        .hero {
+            background-color: blue;
+            color: purple;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 50px;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 20px;
+            margin: 10px 0 0;
+        }
+        .content {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: greenyellow;
+        }
+        .section p {
+            font-size: 18px;
+            color: yellow;
+        }
+        .footer {
+            background-color: red;
+            color: brown;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="Homepage.html">Home</a>
+        <a href="List.html">Members</a>
+        <a href="saving.html">Savings</a>
+        <a href="Report.html">Reports</a>
+    </div>
+        <h2>VICOBA Loan Request Form</h2>
+        <form action="/submit_loan_request" method="POST">
+            <label for="member_id">Member ID</label>
+            <input type="text" id="member_id" name="member_id" required>
+
+            <label for="loan_amount">Loan Amount</label>
+            <input type="number" id="loan_amount" name="loan_amount" required>
+
+            <label for="loan_purpose">Loan Purpose</label>
+            <textarea id="loan_purpose" name="loan_purpose" rows="4" required></textarea>
+
+            <label for="repayment_period">Repayment Period (months)</label>
+            <input type="number" id="repayment_period" name="repayment_period" required>
+
+            <label for="request_date">Request Date</label>
+            <input type="date" id="request_date" name="request_date" required>
+
+            <button type="submit">Submit Request</button>
+        </form>
+    </div>
+</body>
+</html>
